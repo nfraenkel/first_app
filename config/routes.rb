@@ -1,4 +1,19 @@
 Firstapp::Application.routes.draw do
+  
+  root :to => 'teams#index'
+
+  resources :players
+
+
+  resources :teams
+
+
+  resources :games
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
