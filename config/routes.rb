@@ -1,5 +1,8 @@
 Firstapp::Application.routes.draw do
   
+  resources :pledges
+
+
   root :to => 'teams#index'
 
   resources :players
