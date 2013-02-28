@@ -66,6 +66,7 @@ module Firstapp
       g.helper_specs false
     end
 
+    config.action_mailer.default_url_options = { :host => 'http://desolate-springs-8133.herokuapp.com/' }
   
   end
 end

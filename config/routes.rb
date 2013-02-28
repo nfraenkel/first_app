@@ -1,5 +1,9 @@
 Firstapp::Application.routes.draw do
   
+  devise_for :users
+
+  devise_for :teams
+
   resources :pledges
 
 

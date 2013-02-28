@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe 'Adding a player' do
+  fixtures :users
+
+  before do
+    sign_in
+  end
+
+
   it 'requires a last name' do
     visit players_path
     click_link "New Player"
