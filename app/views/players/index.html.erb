@@ -36,6 +36,29 @@
 
 <br />
 
+<h3>Scorers 2 Watch</h3>
+<table>
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Team</th>
+    <th>Games played</th>
+    <th>Goals</th>
+  </tr>
+<% @scorers.each do |player| %>
+    <tr>
+      <td><%= player.first %></td>
+      <td><%= player.last %></td>
+      <td><%= player.team_name %></td>
+      <td><%= player.games_played %></td>
+      <td><%= player.goals %></td>
+    </tr>
+<% end %>
+</table>
+
+<br />
+<br />
+
 <%= link_to 'New Player', new_player_path %><br /><br />
 
 <%= link_to 'View Teams', teams_path %>
