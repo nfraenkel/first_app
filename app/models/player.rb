@@ -1,6 +1,6 @@
 class Player < ActiveRecord::Base
   belongs_to :team
-  attr_accessible :assists, :blocks, :first, :games_played, :goals, :last, :shots, :tackles
+  attr_accessible :assists, :blocks, :first, :games_played, :goals, :last, :shots, :tackles, :team_id
 
   validates :first, :last, presence: { :message => "is a required field, bro."}
 

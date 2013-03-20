@@ -20,8 +20,9 @@
     <%= f.text_field :last %>
   </div>
   <div class="field">
-    <%= f.label :team %><br />
-    <%= f.text_field :team %>
+    <%= f.label :team_id %><br />
+    <%= f.collection_select :team_id, Team.all,
+                            :id, :name %>
   </div>
   <div> <!-- GENDER -->
     <%= f.label :gender %><br />
