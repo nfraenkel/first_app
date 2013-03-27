@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'json', '1.7.7'
+gem 'newrelic_rpm'
 
 gem 'devise'
 
