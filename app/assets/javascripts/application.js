@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+
+$('a[data-remote=true]').live('click', function() {
+    $.ajax({
+        url: this.href,
+        dataType: "script"
+    });
+    return false;
+});

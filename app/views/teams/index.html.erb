@@ -1,5 +1,13 @@
 <h1>Listing teams</h1>
 
+<button type="button" id="helpButton">Need help?</button>
+
+<br/>
+
+<p id="helpText">Click on a team to try and find yourself!</p>
+
+<br/>
+
 <table>
   <tr>
     <th>Name</th>
@@ -29,3 +37,31 @@
 <%= link_to 'New Team', new_team_path %><br /><br />
 
 <%= link_to 'View Players', players_path %>
+
+<style>
+  p#helpText{
+      display:none;
+  }
+</style>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(function() {
+   var $help = $("#helpButton");
+   var $content = $("#helpText");
+
+   $help.click(function() {
+       if ($content.is(":visible")) {
+           $content.fadeOut('slow', function() {
+              $help.text("Need help?");
+           });
+       }
+       else {
+           $content.fadeIn('slow', function() {
+               $help.text("Hide help");
+           });
+       }
+    });
+
+});
+</script>
